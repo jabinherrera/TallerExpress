@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 import environments from './enviroments.js';
 
 function connect() {
-  return mongoose.connect(environments.MONGO_URI);
+  console.log(environments.DATABASE);
+  return mongoose.connect(environments.DATABASE);
 }
 
 export default connect;

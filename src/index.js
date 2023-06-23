@@ -10,7 +10,6 @@ const {PORT} = envs;
 
 const app = express();
 
-app.use(dotenv.config());
 app.use(cors());
 app.use(express.json());
 
