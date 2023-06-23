@@ -17,9 +17,10 @@ async function createProduct(req, res) {
       const description = req.body.description;
       const images = req.body.images;
       const stock = req.body.stock;
-      const product = await ProductModel.updateOne({ _id: productId }, { name, age, price, description, images, stock });
+      const product = await ProductModel.updateOne({ _id: productId }, { name, price, description, images, stock });
       res.send(product);
     } catch (err) {
+        console.log(err)
       res.status(500).send(err);
     }
   }
